@@ -9,13 +9,20 @@ class Program
 {
     static string filePath = "sss.txt";
 
+
+    
     static void Main()
     {
         Console.WriteLine("Welcome to the file manager!");
 
+
+        
         while (true)
         {
+
+            
             Console.WriteLine("\nSelect an action:");
+            
             Console.WriteLine("1. Viewing the contents of a directory");
             Console.WriteLine("2. Create file/directory");
             Console.WriteLine("3. Delete file/directory");
@@ -27,6 +34,7 @@ class Program
 
             int choice = GetUserChoice(0, 7);
 
+            
             switch (choice)
             {
                 case 1:
@@ -57,13 +65,22 @@ class Program
         }
     }
 
+
+    
     static void ViewDirectoryContents()
     {
         Console.Write("Enter the path to the directory: ");
         string path = Console.ReadLine();
 
+
+
+        
         if (Directory.Exists(path))
         {
+
+
+
+            
             string[] files = Directory.GetFiles(path);
             string[] directories = Directory.GetDirectories(path);
 
